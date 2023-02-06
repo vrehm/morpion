@@ -1,4 +1,4 @@
-require 'rails_helper'
+require "rails_helper"
 
 # visit public/index
 RSpec.describe "Public page", type: :feature do
