@@ -1,0 +1,44 @@
+<section class="container mx-auto">
+  <h1 class="text-4xl font-bold text-center text-gray-800 mb-8"><%= @username.capitalize %> VS Ordinateur</h1>
+  <div class="flex justify-center">
+    <div class="p-8 bg-amber-300 w-1/2">
+      <ul class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3 lg:gap-8 text-2xl">
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">1</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">2</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">3</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">4</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">5</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">6</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">7</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">8</li>
+        <li class="px-4 py-16 bg-cyan-400 rounded-md flex items-center justify-center">9</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="flex justify-center py-8">
+    <form class="w-1/2 flex flex-col items-center space-y-2" method="POST" action="/u/<%= @username %>/games/1/turns">
+      <label for="your_turn" class="block text-xl font-medium text-gray-700">Que jouez-vous <%= @username.capitalize %> ?</label>
+      <select id="your_turn" name="your_turn" class="mt-1 block flex-1 rounded-md border-gray-300 py-2 pl-3 pr-10 text-base focus:border-cyan-500 focus:outline-none focus:ring-cyan-500 sm:text-sm">
+        <option>1</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+        <option>5</option>
+        <option>6</option>
+        <option>7</option>
+        <option>8</option>
+        <option>9</option>
+      </select>
+
+      <button type="submit" class="inline-flex items-center rounded-md border border-transparent bg-cyan-600 px-6 py-3 text-base font-medium text-white shadow-sm hover:bg-cyan-700 focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2">
+        <!-- Heroicon name: mini/forward -->
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" class="w-5 h-5">
+          <path d="M3.288 4.819A1.5 1.5 0 001 6.095v7.81a1.5 1.5 0 002.288 1.277l6.323-3.905c.155-.096.285-.213.389-.344v2.973a1.5 1.5 0 002.288 1.276l6.323-3.905a1.5 1.5 0 000-2.553L12.288 4.82A1.5 1.5 0 0010 6.095v2.973a1.506 1.506 0 00-.389-.344L3.288 4.82z" />
+        </svg>
+        <span class="ml-2">Jouer le premier coup</span>
+      </button>
+    </form>
+  </div>
+  </div>
+</section>
