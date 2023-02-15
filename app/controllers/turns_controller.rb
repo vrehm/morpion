@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class TurnsController < ApplicationController
   def create
     @username = params[:username]

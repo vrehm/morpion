@@ -1,9 +1,9 @@
-class GamesController < ApplicationController
-  def index
-  end
+# frozen_string_literal: true
 
-  def new
-  end
+class GamesController < ApplicationController
+  def index; end
+
+  def new; end
 
   def create
     @username = params[:username]
