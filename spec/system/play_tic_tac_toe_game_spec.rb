@@ -6,8 +6,8 @@ RSpec.describe "play Tic Tac Toe game vs the computer", type: :feature do
     visit "/games"
     expect(page).to have_title "Morpion"
     expect(page).to have_content "Jeu du Morpion"
-    expect(page).to have_content "Commencer une nouvelle partie"
-    click_on "Commencer une nouvelle partie", match: :first
+    expect(page).to have_content "S'identifier"
+    click_on "S'identifier", match: :first
 
     fill_in "Votre pseudo", with: "Fortuna"
     click_on "Commencer une nouvelle partie", match: :first
